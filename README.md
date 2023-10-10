@@ -240,6 +240,59 @@
           }
         }
 
+## 타입스크립트 기본 타입 정리 ( promitive types )
+
+### 변수 만들 때 타입 정하기 ( 타입 쉴드 씌우기 )
+- 타입스크립트에서는 변수의 타입을 지정가능
+  - 예시
+
+    `변수명 : 타입` 이렇게 지정 가능
+    이러한 작업을 변수에 타입 쉴드를 씌웠다고 함.
+
+### 여러가지 타입
+- 자주 쓰는 primitive types
+  - string
+  - number
+  - boolean
+  - etc...( null, undefined )
+  - 예시
+
+    `let Namae :string = 'kimu';`
+
+    `let age :number = 20;`
+
+    `let girlfriend :boolean = false;`
+
+### array & object 자료 안에도 타입 지정가능
+- 여러 자료를 한 곳에 저장하고 싶을 때
+  - array 
+    - 그 안에 들어갈 자료들도 전부 타입지정 가능
+    - 예시 (array의 경우 : 타입명[ ])
+
+        `let member :string[] = ['nakamura', 'satou'];`
+    - array 안에 다중 타입 지정 하려면
+
+      -> (string | number)[ ] 
+  - object 
+    - 변수명 오른쪽에 오는 것들은 전부 타입지정 문법
+    - 예시 
+  
+      `let profile : { age : number } = { age : 20 }`
+
+### 팁
+- 모든 변수에 타입지정 할 필요 없다.
+  - 변수 생성 시 타입스크립트가 타입을 자동으로 부여하기 때문
+  - 복잡하게 타입 명시할 필요 없음
+  - 예시
+  
+    `let namae = 'kimu';`
+    `let age = 20;`
+- 에러 메세지 확인
+  - tsc -w 명령어 실행중인 터미널에 나옴
+  - 간결히 보고 싶으면 터미널 탭옆에 problems에도 나옴
+
+
+
 
 
 
