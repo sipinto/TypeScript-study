@@ -1,0 +1,143 @@
+"use strict";
+define("src/App", ["require", "exports", "./logo.svg", "./App.css"], function (require, exports, logo_svg_1) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", { value: true });
+    function App() {
+        return (<div className="App">
+      <header className="App-header">
+        <img src={logo_svg_1.default} className="App-logo" alt="logo"/>
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
+          Learn React
+        </a>
+      </header>
+    </div>);
+    }
+    exports.default = App;
+});
+define("src/App.test", ["require", "exports", "@testing-library/react", "src/App"], function (require, exports, react_1, App_1) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", { value: true });
+    test('renders learn react link', function () {
+        (0, react_1.render)(<App_1.default />);
+        var linkElement = react_1.screen.getByText(/learn react/i);
+        expect(linkElement).toBeInTheDocument();
+    });
+});
+define("src/reportWebVitals", ["require", "exports"], function (require, exports) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", { value: true });
+    var reportWebVitals = function (onPerfEntry) {
+        if (onPerfEntry && onPerfEntry instanceof Function) {
+            new Promise(function (resolve_1, reject_1) { require(['web-vitals'], resolve_1, reject_1); }).then(function (_a) {
+                var getCLS = _a.getCLS, getFID = _a.getFID, getFCP = _a.getFCP, getLCP = _a.getLCP, getTTFB = _a.getTTFB;
+                getCLS(onPerfEntry);
+                getFID(onPerfEntry);
+                getFCP(onPerfEntry);
+                getLCP(onPerfEntry);
+                getTTFB(onPerfEntry);
+            });
+        }
+    };
+    exports.default = reportWebVitals;
+});
+define("src/index", ["require", "exports", "react", "react-dom/client", "src/App", "src/reportWebVitals", "./index.css"], function (require, exports, react_2, client_1, App_2, reportWebVitals_1) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", { value: true });
+    var root = client_1.default.createRoot(document.getElementById('root'));
+    root.render(<react_2.default.StrictMode>
+    <App_2.default />
+  </react_2.default.StrictMode>);
+    (0, reportWebVitals_1.default)();
+});
+define("src/setupTests", ["require", "exports", "@testing-library/jest-dom"], function (require, exports) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", { value: true });
+});
+var 이름 = '김민재';
+var 나이 = 24;
+var 출생지역 = '전주';
+var music = { '가수': '유우리', '곡': 'kakurenbo' };
+var project = {
+    member: ['kim', 'park'],
+    days: 30,
+    started: true,
+};
+console.log(이름 + 나이 + 출생지역 + music + project);
+var 배열 = [1, '2', 3];
+var 객체 = { data: '123' };
+var user = 'kim';
+var age = undefined;
+var married = false;
+var 철수 = [user, age, married];
+var 학교 = {
+    score: [100, 97, 84],
+    teacher: 'Phil',
+    friend: 'John'
+};
+학교.score[4] = false;
+학교.friend = ['Lee', 학교.teacher];
+function puu(namae) {
+    if (namae) {
+        console.log("안녕하세요 " + namae);
+    }
+    else {
+        console.log("이름이 없습니다");
+    }
+}
+console.log(puu('김민재'));
+function pua(x) {
+    if (typeof x === 'number') {
+        console.log(x.toString().length);
+    }
+    else if (typeof x === 'string') {
+        console.log(x.length);
+    }
+}
+console.log(pua('1634'));
+function merrige(월소득, 집보유여부, 매력점수) {
+    var 소득 = 0;
+    if (월소득 > 0) {
+        소득 = 월소득 / 10000;
+    }
+    var score = 0;
+    if (소득 > 0) {
+        score += 소득;
+    }
+    if (집보유여부) {
+        score += 500;
+    }
+    if (매력점수 === '상') {
+        score += 100;
+    }
+    if (score >= 600) {
+        return '결혼가능!';
+    }
+}
+console.log(merrige(600000, true, '상'));
+function 클리닝함수(x) {
+    var 클리닝 = [];
+    for (var index = 0; index < x.length; index++) {
+        if (typeof x[index] === 'string') {
+            클리닝.push(Number(x[index]));
+        }
+        else if (typeof x[index] === 'number') {
+            클리닝.push(Number(x[index]));
+        }
+    }
+    return 클리닝;
+}
+console.log(클리닝함수(['2', 3, '4']));
+var 철수쌤 = { subject: 'math' };
+var 영희쌤 = { subject: ['science', 'english'] };
+var 민수쌤 = { subject: ['science', 'art', 'korean'] };
+function 만들함수(x) {
+    var 출력 = '';
+    출력 = x[-1];
+    return 출력;
+}
+console.log(만들함수(철수쌤));
+console.log(만들함수(영희쌤));
+console.log(만들함수(민수쌤));
