@@ -9,5 +9,5 @@ let project :{'member' :string[], 'days' :number, 'started' :boolean} = {
     days : 30,
     started : true,
 }
-
+console.log(이름+나이+출생지역+music+project);
 

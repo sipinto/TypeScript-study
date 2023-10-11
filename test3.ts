@@ -6,6 +6,7 @@ function puu(namae? :string){
     }
 
 }
+console.log(puu('김민재'))
 
 function pua(x? :string|number){
     if(typeof x === 'number'){
@@ -14,6 +15,7 @@ function pua(x? :string|number){
         console.log(x.length);
     }
 }
+console.log(pua('1634'));
 
 function merrige(월소득 :number, 집보유여부 :boolean, 매력점수 :string){
     let 소득 :number = 0;
@@ -34,3 +36,4 @@ function merrige(월소득 :number, 집보유여부 :boolean, 매력점수 :stri
         return '결혼가능!';
     }
 }
+console.log(merrige(600000,true,'상'));
